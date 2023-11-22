@@ -1,0 +1,27 @@
+<p>filterpipe works!</p>
+<div class="row.justify-content-center">
+<div class="col-md-8 mb=2">
+<label for="productId">search by product</label>
+<input type="text" class="form-control" id="productId" placeholder="Enter product name" [(ngModel)]="namesearch">
+</div>
+<div class=".col-md-8">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">prodNo</th>
+                <th scope="col">productName</th>
+                <th scope="col">productPrice</th>
+                <th scope="col">availablity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productArr | filter:namesearch">
+                <td>{{product.prodNo}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productPrice}}</td>
+                <td>{{product.availablity}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

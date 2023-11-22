@@ -1,0 +1,42 @@
+<p>pipedemo works!</p>
+<p>Parameter in pipes</p>
+<p>Today's date : <strong>{{todaysDate}}</strong></p>
+<p>Today's date : <strong>{{todaysDate | date:'shortDate'}}</strong></p>
+<p>Today's date : <strong>{{todaysDate | date:'fullDate'}}</strong></p>
+<p>Today's date : <strong>{{todaysDate | date:'M//dd//yyyy'}}</strong></p>
+<p>Today's date : <strong>{{todaysDate | date:'h:mm'}}</strong></p>
+
+<p>chained pipes</p>
+<div>
+    Date with chiledpipes uppercase : <strong>{{todaysDate | date:'fullDate' | uppercase}}</strong>
+    Date with chiledpipes lowercase : <strong>{{todaysDate | date:'fullDate' | lowercase}}</strong>
+
+</div>
+
+<div style="text-align: center;">
+    <h2>Currency Pipe</h2>
+    <!-- using property binding to show value of currency into ui -->
+    <!-- <div>
+        [innerHTML]="price"
+    </div> -->
+
+    <p>{{ price | currency:'EUR'}}</p>
+    <p>{{ price | currency:'INR'}}</p>
+    <p>{{ price | currency:'USD'}}</p>
+
+
+</div>
+<div style="text-align: center;">
+    <p>{{emp | json}}</p>
+</div>
+
+<!-- myObservable -->
+<!-- wihtout subscribe also we can get the data throguh the observable with using pipe operator with async -->
+<div style="text-align: center;">
+    <p>{{myObservable  | async}}</p>
+</div>
+
+<div style="text-align: center;">
+    <h1>Custom Pipe</h1>
+    {{price | count}}
+</div>

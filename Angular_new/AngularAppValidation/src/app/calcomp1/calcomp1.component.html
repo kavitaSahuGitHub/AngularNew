@@ -1,0 +1,35 @@
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+                <div class="form-group">
+                    <label for="dob">DOB</label>
+                    <input type="date" class="form-control" formControlName="dob"
+                        placeholder="Please enter date">
+                    <small class="text-danger"
+                        *ngIf="!myForm.get('dob').valid && myForm.get('dob').touched">Date
+                         required *</small>
+                </div>
+                <button type="submit" class="btn btn-success mt-2 btn-lg">Submit</button>
+
+                <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+                    <h2 class="text-center">Form Data</h2>
+                    <p>DOB is: <strong>{{myForm.get('dob').value}}</strong></p>
+                </div>
+                </form>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="row">
+    <div class="input-field col m2">
+        <input type="date" [(ngModel)]="birthdate" id="txtdate">
+    </div>
+    <div class="input-field col m4">
+        <input type="number" [(ngModel)]="age" id="age">
+    </div>
+    <button (click)="CalculateAge()">Calculate Age</button>
+
+    <p>Age: <strong>{{age}}</strong></p>
+</div>
